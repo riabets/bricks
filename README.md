@@ -1,4 +1,5 @@
-# bricks
+# Bricks
+<img src="./src/assets/index.png" alt="Bricks">
 
 ## Project setup
 ```
@@ -20,5 +21,3 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
