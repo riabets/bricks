@@ -1,11 +1,13 @@
 <template>
     <section>
-        <canvas id="gameScreen" class="game-screen" height="600" width="1000"></canvas>
+        <img id="imgBall" src="./../assets/ball.png" alt="">
+        <img id="imgBrick" src="./../assets/brick.png" alt="">
+        <canvas id="gameScreen" class="game-screen" height="600" width="800"></canvas>
     </section>
 </template>
 
 <script>
-import Paddle from "@/components/app/paddle";
+import Game from "@/components/app/game";
 
 export default {
     name: "Matrix",
@@ -23,23 +25,23 @@ export default {
             const GAME_WIDTH = 800;
             const GAME_HEIGHT = 600;
 
-            let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-
-            paddle.draw(ctx);
-
             let lastTime = 0;
+
+            let game = new Game(GAME_WIDTH, GAME_HEIGHT);
+            game.start();
 
             function gameLoop(timestamp) {
                 let deltaTime = timestamp - lastTime;
                 lastTime = timestamp;
-                ctx.clearRect(0, 0, 800, 600);
-                paddle.update(deltaTime);
-                paddle.draw(ctx);
+                ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-                // requestAnimationFrame(gameLoop);
+                game.update(deltaTime);
+                game.draw(ctx);
+
+                requestAnimationFrame(gameLoop);
             }
 
-            gameLoop();
+            requestAnimationFrame(gameLoop);
         },
     }
 }
@@ -57,5 +59,10 @@ export default {
         background-color: white;
         margin: 30px auto;
         border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    img {
+        display: none;
     }
 </style>
