@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <header>
             <div
                 class="colours"
@@ -28,7 +28,7 @@
                 v-on:click="hoverItems(index)"
             ></div>
         </div>
-    </main>
+    </section>
 </template>
 
 <script>

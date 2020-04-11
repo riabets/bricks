@@ -1,16 +1,20 @@
 <template>
     <div id="app">
-        <field></field>
+<!--        <field></field>-->
+<!--        <hr>-->
+        <matrix></matrix>
     </div>
 </template>
 
 <script>
-import Field from "@/components/Field";
+// import Field from "@/components/Field";
+import Matrix from "@/components/Matrix";
 
 export default {
     name: 'App',
     components: {
-        'field': Field
+        // 'field': Field,
+        'matrix': Matrix,
     }
 }
 </script>
