@@ -71,7 +71,7 @@ export default class Game {
             ctx.fillStyle = 'rgba(255,129,168,0.8)';
             ctx.fill();
 
-            ctx.font = "30px Arial";
+            ctx.font = "30px PressStart, serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
             ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2);
@@ -79,22 +79,22 @@ export default class Game {
 
         if (this.gamestate === GAMESTATE.MENU) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-            ctx.fillStyle = 'rgba(99,211,255,0.8)';
+            ctx.fillStyle = '#ffd99d';
             ctx.fill();
 
-            ctx.font = "30px Arial";
-            ctx.fillStyle = "white";
+            ctx.font = "30px PressStart, serif";
+            ctx.fillStyle = "#4c6d95";
             ctx.textAlign = "center";
             ctx.fillText("Press SPACEBAR To Start", this.gameWidth / 2, this.gameHeight / 2);
         }
 
         if (this.gamestate === GAMESTATE.GAMEOVER) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-            ctx.fillStyle = 'rgba(43,255,187,0.8)';
+            ctx.fillStyle = 'rgba(255, 217, 157,0.8)';
             ctx.fill();
 
-            ctx.font = "30px Arial";
-            ctx.fillStyle = "white";
+            ctx.font = "30px PressStart, serif";
+            ctx.fillStyle = "#4c6d95";
             ctx.textAlign = "center";
             ctx.fillText("Game Over", this.gameWidth / 2, this.gameHeight / 2);
         }

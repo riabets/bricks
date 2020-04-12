@@ -2,8 +2,8 @@ export default class Paddle {
     constructor(game) {
         this.gameWidth = game.gameWidth;
 
-        this.width = 140;
-        this.height = 30;
+        this.width = 150;
+        this.height = 25;
 
         this.maxSpeed = 7;
         this.speed = 0;
@@ -27,7 +27,7 @@ export default class Paddle {
     }
 
     draw(ctx) {
-        ctx.fillStyle = 'orange';
+        ctx.fillStyle = '#ffd99d';
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 

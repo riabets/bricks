@@ -1,7 +1,7 @@
 <template>
     <section>
-        <img id="imgBall" src="./../assets/ball.png" alt="">
-        <img id="imgBrick" src="./../assets/brick.png" alt="">
+        <img id="imgBall" class="game-img" src="./../assets/baseball.png" alt="">
+        <img id="imgBrick" class="game-img" src="./../assets/brick.png" alt="">
         <canvas id="gameScreen" class="game-screen" height="600" width="800"></canvas>
     </section>
 </template>
@@ -54,14 +54,14 @@ export default {
     }
 
     .game-screen {
-        border: 1px solid white;
+        border: 1px solid #A0D5C7;
         background-color: white;
         margin: 30px auto;
         border-radius: 4px;
         box-sizing: border-box;
     }
 
-    img {
+    .game-img {
         display: none;
     }
 </style>
