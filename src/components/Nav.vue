@@ -1,14 +1,14 @@
 <template>
     <nav class="navigation">
-        <a href="/" class="navigation__item">Home</a>
-        <a href="/paint-bricks" class="navigation__item">
+        <router-link :to="{name: 'home'}" class="navigation__item">Home</router-link>
+        <router-link :to="{name: 'paint-bricks'}" class="navigation__item">
             <img src="./../assets/wall.png" alt="">
             Paint bricks
-        </a>
-        <a href="/smash-bricks" class="navigation__item">
+        </router-link>
+        <router-link :to="{name: 'smash-bricks'}" class="navigation__item">
             <img src="./../assets/baseball.png" alt="">
             Smash bricks
-        </a>
+        </router-link>
     </nav>
 </template>
 

@@ -14,17 +14,17 @@ const router = new Router({
     base: Vue.config.publicPath,
     routes: [
         {
-            path: '/',
+            path: '/bricks',
             name: 'home',
             component: App,
             children: [
                 {
-                    path: 'paint-bricks',
+                    path: '/bricks/paint-bricks',
                     name: 'paint-bricks',
                     component: PaintBricks
                 },
                 {
-                    path: 'smash-bricks',
+                    path: '/bricks/smash-bricks',
                     name: 'smash-bricks',
                     component: SmashBricks
                 },
