@@ -1,6 +1,16 @@
 <template>
-    <main>
-        <header>
+    <section>
+        <div class="settings">
+            <div
+                class="grids"
+                v-for="(item, index) in grids"
+                v-bind:key="`grids-setting-${index}`"
+                v-on:click="chooseGrid(item.number)"
+            >
+                {{item.number}}
+            </div>
+        </div>
+        <div class="settings">
             <div
                 class="colours"
                 v-for="(item, index) in colours"
@@ -10,15 +20,8 @@
             >
                 {{item.color}}
             </div>
-            <div
-                class="grids"
-                v-for="(item, index) in grids"
-                v-bind:key="`grids-setting-${index}`"
-                v-on:click="chooseGrid(item.number)"
-            >
-                {{item.number}}
-            </div>
-        </header>
+        </div>
+
         <div class="bricks">
             <div
                 class="brick"
@@ -28,7 +31,7 @@
                 v-on:click="hoverItems(index)"
             ></div>
         </div>
-    </main>
+    </section>
 </template>
 
 <script>
@@ -134,7 +137,7 @@ export default {
 <style lang="scss">
     .bricks {
         width: 100%;
-        background-color: yellowgreen;
+        background-color: #A0D5C7;
         padding: 50px;
         display: flex;
         flex-wrap: wrap;
@@ -143,27 +146,29 @@ export default {
             width: 75px;
             height: 75px;
             display: inline-flex;
+            border: 1px solid #A0D5C7;
 
             &:hover {
                 cursor: url('../assets/brush.png'), auto;
-                &:before {
-                    content: '';
-                    display: inline-block;
-                    width: 75px;
-                    height: 75px;
-                    border: 1px solid #eee;
-                    box-sizing: border-box;
-                }
+
+                /*&:before {*/
+                /*    content: '';*/
+                /*    display: inline-block;*/
+                /*    width: 75px;*/
+                /*    height: 75px;*/
+                /*    border: 1px solid #eeeeee;*/
+                /*    box-sizing: border-box;*/
+                /*}*/
             }
         }
     }
 
-    header {
+    .settings {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 50px;
-        padding-top: 20px;
+        padding-top: 10px;
+        margin: 10px auto;
 
         .colours {
             background-color: white;
@@ -173,7 +178,6 @@ export default {
             margin-right: 20px;
             text-transform: capitalize;
             font-weight: bold;
-            font-family: Arial, sans-serif;
 
             &:hover {
                 cursor: pointer;
@@ -187,7 +191,6 @@ export default {
             border-radius: 4px;
             margin-right: 20px;
             font-weight: bold;
-            font-family: Arial, sans-serif;
         }
     }
 </style>
