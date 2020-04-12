@@ -4,12 +4,14 @@
         <div v-if="$route.name === 'home'">Home</div>
         <paint-bricks v-if="$route.name === 'paint-bricks'"></paint-bricks>
         <smash-bricks v-if="$route.name === 'smash-bricks'"></smash-bricks>
+        <poppuri v-if="$route.name === 'poppuri'"></poppuri>
     </div>
 </template>
 
 <script>
 import PaintBricks from "@/components/PaintBricks";
 import SmashBricks from "@/components/SmashBricks";
+import Poppuri from "@/components/Poppuri";
 import Nav from "@/components/Nav";
 
 export default {
@@ -17,6 +19,7 @@ export default {
     components: {
         'paint-bricks': PaintBricks,
         'smash-bricks': SmashBricks,
+        'poppuri': Poppuri,
         'navigation': Nav,
     },
 }
@@ -51,5 +54,9 @@ export default {
         background-color: #A0D5C7;
         position: relative;
         padding-left: 85px;
+        min-height: 100vh;
+    }
+    #app {
+        min-height: 100vh;
     }
 </style>

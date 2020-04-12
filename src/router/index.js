@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import App from "@/App";
 import PaintBricks from "@/components/PaintBricks";
 import SmashBricks from "@/components/SmashBricks";
+import Poppuri from "@/components/Poppuri";
 
 Vue.config.publicPath = process.env.publicPath;
 
@@ -27,6 +28,11 @@ const router = new Router({
                     path: '/bricks/smash-bricks',
                     name: 'smash-bricks',
                     component: SmashBricks
+                },
+                {
+                    path: '/bricks/poppuri',
+                    name: 'poppuri',
+                    component: Poppuri
                 },
             ]
         },

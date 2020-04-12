@@ -9,6 +9,9 @@
             <img src="./../assets/baseball.png" alt="">
             Smash bricks
         </router-link>
+        <router-link :to="{name: 'poppuri'}" class="navigation__item">
+            Poppuri
+        </router-link>
     </nav>
 </template>
 
