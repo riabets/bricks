@@ -1,6 +1,6 @@
 # Bricks
 <a href="https://riabets.github.io/bricks/" sttle="margin-bottom: 20px;display:block;">Demo to click around</a>
-<img src="./src/assets/index.png" alt="Bricks">
+<img src="./src/assets/index1.png" alt="Bricks">
 
 ## Project setup
 ```
