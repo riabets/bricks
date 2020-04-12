@@ -1,3 +1,5 @@
+import { detectCollision } from "@/components/app/collisionDetection";
+
 export default class Brick {
     constructor(game, position) {
         this.game = game;
@@ -8,10 +10,15 @@ export default class Brick {
 
         this.width = 100;
         this.height = 30;
+
+        this.markedForDeletion = false;
     }
 
     update(){
-
+        if(detectCollision(this.game.ball, this)){
+            this.game.ball.speed.y = -this.game.ball.speed.y;
+            this.markedForDeletion = true;
+        }
     }
 
     draw(ctx) {
